@@ -18,6 +18,7 @@ const createClientJs = (filename) => ({
         exclude: /node_modules/,
         query: {
           presets: ['es2015', 'react'],
+          plugins: ['syntax-class-properties', 'transform-class-properties'],
         },
       },
     ],
@@ -33,4 +34,4 @@ const createClientJs = (filename) => ({
   devtool: 'sourcemap',
 });
 
-module.exports = ['example1.js', 'example2.js'].map(createClientJs);
+module.exports = ['example2.js', 'example3.js'].map(createClientJs);
