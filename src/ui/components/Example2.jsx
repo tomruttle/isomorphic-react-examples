@@ -32,9 +32,10 @@ class Example2 extends React.Component {
   // @TODO: Find a better way to validate only on the client-side
   componentWillMount() {
     if (global.document) {
-      this.setState(Object.assign({}, this.state, {
-        isValid: this.validate(this.state.form.text),
-      }));
+      const isValid = this.validate(this.state.form.text);
+      if (isValid !== this.state.isValid) {
+        this.setState(Object.assign({}, this.state, { isValid }));
+      }
     }
   }
 

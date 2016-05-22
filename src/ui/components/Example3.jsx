@@ -17,7 +17,10 @@ class Example3 extends React.Component {
   // @TODO This is ugly. ISN'T THERE A BETTER WAY???
   componentWillMount() {
     if (global.document) {
-      this.setState({ text: global.document.getElementsByName('text')[0].value });
+      const text = global.document.getElementsByName('text')[0].value;
+      if (text !== this.state.text) {
+        this.setState({ text });
+      }
     }
   }
 
