@@ -1,5 +1,7 @@
 /* eslint no-console: ["warn", { allow: ["info"] }] */
 
+require('babel-register');
+
 const express = require('express');
 
 const { example1, example2, example3, example4 } = require('./src');
