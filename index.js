@@ -1,9 +1,8 @@
+/* eslint no-console: ["warn", { allow: ["info"] }] */
+
 const express = require('express');
 
-const example1 = require('./src/example1');
-const example2 = require('./src/example2');
-const example3 = require('./src/example3');
-const example4 = require('./src/example4');
+const { example1, example2, example3, example4 } = require('./src');
 
 const port = 3000;
 
