@@ -34,7 +34,7 @@ class Example2 extends React.Component {
     if (global.document) {
       const isValid = this.validate(this.state.form.text);
       if (isValid !== this.state.isValid) {
-        this.setState(Object.assign({}, this.state, { isValid }));
+        this.setState({ isValid });
       }
     }
   }
